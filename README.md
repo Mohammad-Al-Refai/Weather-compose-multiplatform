@@ -1,5 +1,7 @@
 This is a Kotlin Multiplatform project targeting Android, iOS.
-
+Using:
+Android Studio Ladybug | 2024.2.1 Patch 2
+JDK: Corretto-17.0.6.10.1
 
 https://github.com/user-attachments/assets/1f2471b9-7b7b-42b5-ad02-f28dc284cc5e
 
