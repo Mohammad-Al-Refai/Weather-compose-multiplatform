@@ -26,6 +26,7 @@ kotlin {
         iosTarget.binaries.framework {
             baseName = "shared"
             isStatic = true
+            binaryOption("bundleId", "mo.cmp.weather.shared")
         }
     }
     
