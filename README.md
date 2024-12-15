@@ -9,7 +9,6 @@ https://github.com/user-attachments/assets/1f2471b9-7b7b-42b5-ad02-f28dc284cc5e
 
 
 
-
 * `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
   It contains several subfolders:
   - `commonMain` is for code that’s common for all targets.
