@@ -17,13 +17,13 @@ import org.koin.dsl.KoinAppDeclaration
 
 @Composable
 @Preview
-fun App(viewModel: LandingViewModel = koinViewModel<LandingViewModel>()) {
+fun App() {
         MaterialTheme {
             Surface(
                 modifier = Modifier.fillMaxSize(),
                 color = MaterialTheme.colors.background,
             ) {
-                LandingPage(viewModel = viewModel)
+                LandingPage()
             }
         }
 }

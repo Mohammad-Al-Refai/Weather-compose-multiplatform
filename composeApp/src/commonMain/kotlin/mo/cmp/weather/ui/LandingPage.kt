@@ -33,10 +33,12 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import mo.cmp.weather.store.Intent
+import org.koin.compose.viewmodel.koinViewModel
 
 
 @Composable
-fun LandingPage(viewModel: LandingViewModel) {
+fun LandingPage() {
+   val viewModel: LandingViewModel = koinViewModel<LandingViewModel>()
     val state by viewModel.state.collectAsState()
     Scaffold(
         topBar = {

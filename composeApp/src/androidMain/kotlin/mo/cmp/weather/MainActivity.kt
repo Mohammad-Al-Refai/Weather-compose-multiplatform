@@ -11,8 +11,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         setContent {
-            val landingViewModel = koinViewModel<LandingViewModel>()
-            App(landingViewModel)
+            App()
         }
     }
 }
