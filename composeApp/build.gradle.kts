@@ -35,13 +35,7 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
-            // Koin
             implementation(libs.koin.android)
-            // MVIKotlin
-            implementation(libs.mvikotlin)
-            implementation(libs.mvikotlin.main)
-            implementation(libs.mvikotlin.extensions.coroutines)
-            implementation(libs.androidx.lifecycle.viewmodel.compose)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -52,22 +46,19 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
-
             implementation(libs.kotlinx.coroutines.core)
-            // MVIKotlin
-            implementation(libs.mvikotlin)
-            implementation(libs.mvikotlin.main)
-            implementation(libs.mvikotlin.extensions.coroutines)
-            // ktor
+            implementation(libs.voyager.navigator)
+            implementation(libs.voyager.screenmodel)
+            implementation(libs.voyager.transitions)
             implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.cio)
             implementation(libs.ktor.client.content.negotiation)
             implementation(libs.ktor.serialization.kotlinx.json)
-            // kotlinx-serialization
             implementation(libs.kotlinx.serialization.json)
-            // Koin
             implementation(libs.koin.core)
-            implementation(libs.koin.compose.viewmodel)
+            implementation(libs.koin.compose)
+            implementation(libs.orbit.core)
+            implementation(libs.orbit.compose)
         }
         nativeMain.dependencies {
             implementation(libs.ktor.client.darwin)

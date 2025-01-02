@@ -16,12 +16,12 @@ class WeatherAPI(private val httpClient: HttpClient) {
                 parameter("units","metric")
             }
             println("Response status: ${response.status}")
-            println("Response body: ${response.bodyAsText()}") // Logs the raw JSON response
+            println("Response body: ${response.bodyAsText()}")
 
             WeatherAPIStatus.Success(response.body<Weather>())
         } catch (e: Exception) {
             println("Error: ${e.message}")
-            WeatherAPIStatus.Error(e.message ?: "Error ")
+            WeatherAPIStatus.Error(e.message ?: "Error")
         }
     }
     companion object {

@@ -5,14 +5,10 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import mo.cmp.weather.di.platformModules
+import cafe.adriel.voyager.navigator.Navigator
+import cafe.adriel.voyager.transitions.SlideTransition
 import mo.cmp.weather.ui.LandingPage
-import mo.cmp.weather.ui.LandingViewModel
 import org.jetbrains.compose.ui.tooling.preview.Preview
-import org.koin.compose.KoinApplication
-import org.koin.compose.viewmodel.koinViewModel
-import org.koin.core.context.startKoin
-import org.koin.dsl.KoinAppDeclaration
 
 
 @Composable
@@ -23,14 +19,10 @@ fun App() {
                 modifier = Modifier.fillMaxSize(),
                 color = MaterialTheme.colors.background,
             ) {
-                LandingPage()
+                Navigator(LandingPage()){
+                    SlideTransition(it)
+                }
             }
         }
 }
 
-fun initKoin(appDeclaration: KoinAppDeclaration = {}) {
-    startKoin {
-        appDeclaration()
-        modules(platformModules)
-    }
-}
